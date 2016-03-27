@@ -1,0 +1,158 @@
+body {
+  background: lightblue;
+  position: relative;
+  font-family: 'Sancreek', cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+#selections {
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  border: 1px solid grey;
+  background: white;
+  border-radius: 5px;
+  margin: auto 10% auto 10%;
+}
+
+#selections img {
+  height: 50px;
+  border: 1px solid darkgreen;
+  border-radius: 5px;
+}
+
+#selections .btn:hover {
+  border: 1px solid lightgreen;
+}
+
+#selections img:hover {
+  border: 1px solid lightgreen;
+}
+
+#selections h2 {
+  font-size: 20px;
+}
+
+.choiceSet {
+  width: 50%;
+  padding: 10px 10px 20px 30px;
+}
+
+.leftChoice {
+  float: left;
+}
+
+.rightChoice {
+  float: right;
+  border-left: 1px solid lightgrey;
+}
+
+.bottomChoice {
+  border-top: 1px solid lightgrey;
+}
+
+#buttonHolder {
+  text-align: center;
+}
+
+.submit {
+  display: block;
+  clear: both;
+  margin: 5px;
+}
+
+#countDownBox {
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  border: 1px solid grey;
+  background: white;
+  border-radius: 5px;
+  margin: auto 20% auto 20%;
+  padding: 10px;
+  text-align: center;
+}
+
+#countDownBox h1 {
+  font-size: 80px;
+}
+
+#countDownBox p {
+  font-size: 18px;
+}
+
+#howTo {
+  font-size: 16px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+td {
+  border-top: 1px solid darkgreen;
+  border-bottom: 1px solid darkgreen;
+  height: 100px;
+  width: 1%;
+}
+
+.empty {
+  display: none;
+}
+
+table {
+  background: green;
+  height: 125px;
+}
+
+.reset {
+  margin: -50px auto auto 85%;
+  display: inline-block;
+}
+
+/* Every other horse is raised to simulate galloping*/
+.up {
+  margin: auto auto 20px auto;
+}
+
+.scoreboard {
+    text-align: center;
+    font-size: 20px;
+    line-height: 10px;
+    margin: 5px;
+}
+
+.scoreboard tr td {
+  background: lightgrey;
+  border: 1px solid black;
+}
+
+.mini {
+  height: 50px;
+  margin: -20px auto auto auto;
+}
+
+.finish {
+  background-image: url("../images/checker.gif");
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+#whoWon {
+  position: absolute;
+  top: 150px;
+  left: 25%;
+  border: 1px solid grey;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+}
+
+#whoWon .reset {
+  margin: auto auto auto 50%;
+  display: inline-block;
+}

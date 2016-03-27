@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Custom fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Sancreek' rel='stylesheet' type='text/css'>
     <!-- Bootstrap CDN -->
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- Custom CSS -->
@@ -19,14 +21,374 @@
 
   <body>
     <div id = "title">
-      <h1>Creatively Named Racing Game</h1>
+      <h1>◊ The General Assembly Derby ◊</h1>
     </div>
     <div id = "howTo">
-      <p>This is how to play the game. There's going to be some text that's actually useful here. It'll probably be closer to this length, so I'll keep typing for a while.</p>
+      <p>It's a good ol' fashioned horse race! Mash your key and beat your competitors to the finish line to earn your spot in the Winners Circle.</p>
+      <button type="button" class="btn btn-success reset">Restart Game</button>
     </div>
-    <div id = "container col-xs-12">
-      <div id = "grid">
 
+    <div id="selections">
+      <h1>Welcome to The General Assembly Derby!</h1>
+      <div id="numPlayers">
+        <div id="buttonHolder"
+          <h2> Choose the number of players:</br></h2>
+          <button type="button" class="btn btn-success twoPlayers">Two</button>
+          <button type="button" class="btn btn-success threePlayers">Three</button>
+          <button type="button" class="btn btn-success fourPlayers">Four</button>
+        </div>
+      </div>
+      <div id="playerOne" class ="choiceSet leftChoice">
+        <h2>Player One</h2>
+        <div class="getName">
+          <p>Player name:</p>
+          <input type="text" class="form-control" id="playerName">
+        </div>
+        <div class="iconChoice">
+          <p>Choose horse:</p>
+          <img src="images/Horse1.png">
+          <img src="images/Horse2.png">
+          <img src="images/Horse3.png">
+          <img src="images/Horse4.png">
+        </div>
+      </div>
+      <div id="playerTwo" class ="choiceSet rightChoice">
+        <h2>Player Two</h2>
+        <div class="getName">
+          <p>Player name:</p>
+          <input type="text" class="form-control" id="playerName">
+        </div>
+        <div class="iconChoice">
+          <p>Choose horse:</p>
+          <img src="images/Horse1.png">
+          <img src="images/Horse2.png">
+          <img src="images/Horse3.png">
+          <img src="images/Horse4.png">
+        </div>
+      </div>
+      <div class ="threeSetup choiceSet leftChoice bottomChoice">
+        <h2>Player Three</h2>
+        <div class="getName">
+          <p>Player name:</p>
+          <input type="text" class="form-control" id="playerName">
+        </div>
+        <div class="iconChoice">
+          <p>Choose horse:</p>
+          <img src="images/Horse1.png">
+          <img src="images/Horse2.png">
+          <img src="images/Horse3.png">
+          <img src="images/Horse4.png">
+        </div>
+      </div>
+      <div class =" fourSetup choiceSet rightChoice bottomChoice">
+        <h2>Player Four</h2>
+        <div class="getName">
+          <p>Player name:</p>
+          <input type="text" class="form-control" id="playerName">
+        </div>
+        <div class="iconChoice">
+          <p>Choose horse:</p>
+          <img src="images/Horse1.png">
+          <img src="images/Horse2.png">
+          <img src="images/Horse3.png">
+          <img src="images/Horse4.png">
+        </div>
+      </div>
+      <button type="button" class="btn btn-success submit">Let's go!</button>
+    </div>
+
+    <div id="countDownBox">
+      <h2>Click the button to start the count down. When you see "Go," press your assigned button!</h2>
+      <h1 id="num"></br></h1>
+      <p>◊ Player One: Press Z</p>
+      <p>◊ Player Two: Press P</p>
+      <p class="threeSetup">◊ Player Three: Press M</p>
+      <p class="fourSetup">◊ Player Four: Press Q</p>
+      <button type="button" class="btn btn-success submit countdown">Start Countdown</button>
+    </div>
+
+    <div id = "container">
+      <table class = "trackOne">
+        <tr class = "trackOne">
+          <td><img src="images/Horse1.png" class ="start"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td><img src="images/Horse1.png" class="cell empty"></td>
+          <td><img src="images/Horse1.png" class="cell empty up"></td>
+          <td class="finish"><img src="images/Horse1.png" class="oneEnd cell empty"></td>
+        </tr>
+      </table>
+      <table class = "trackTwo">
+        <tr class = "trackTwo">
+          <td><img src="images/Horse2.png" class="start"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td><img src="images/Horse2.png" class="cell empty"></td>
+          <td><img src="images/Horse2.png" class="cell empty up"></td>
+          <td class="finish"><img src="images/Horse2.png" class="twoEnd cell empty"></td>
+        </tr>
+      </table>
+      <table class = "trackThree threeSetup">
+        <tr class = "trackThree">
+          <td><img src="images/Horse3.png" class="start"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td><img src="images/Horse3.png" class="cell empty"></td>
+          <td><img src="images/Horse3.png" class="cell empty up"></td>
+          <td class="finish"><img src="images/Horse3.png" class="threeEnd cell empty"></td>
+        </tr>
+      </table>
+      <table class = "trackFour fourSetup">
+        <tr class = "trackFour">
+          <td><img src="images/Horse4.png" class="start"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td><img src="images/Horse4.png" class="cell empty"></td>
+          <td><img src="images/Horse4.png" class="cell empty up"></td>
+          <td class="finish"><img src="images/Horse4.png" class="fourEnd cell empty"></td>
+        </tr>
+      </table>
+      <div class = "scoreboard">
+        <table class ="scoreboard">
+          <tr>
+            <td><img src="images/Horse1.png" class="mini"><p>Player One</p><p>Press Z</p></td>
+            <td><img src="images/Horse2.png" class="mini"><p>Player Two</p><p>Press P</p></td>
+            <td class="threeSetup"><img src="images/Horse3.png" class="mini"><p>Player Three</p><p>Press M</p></td>
+            <td class="fourSetup"><img src="images/Horse4.png" class="mini"><p>Player Four</p><p>Press Q</p></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td class="threeSetup"></td>
+            <td class="fourSetup"></td>
+          </tr>
+        </table>
+      </div>
+      <div id = "whoWon">
+        <h1>And the winner is:</h1>
+        <h2>Player Name</h2>
+        <img src="images/Horse3.png">
+        <button type="button" class="btn btn-success reset">Play Again!</button>
       </div>
     </div>
   </body>

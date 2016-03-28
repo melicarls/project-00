@@ -35,6 +35,7 @@ h1 {
 
 #selections .btn {
   padding: 5px;
+  margin: 5px;
 }
 
 .choiceSet {
@@ -44,15 +45,15 @@ h1 {
 
 .leftChoice {
   float: left;
+  border-right: 1px solid lightgrey;
 }
 
 .rightChoice {
   float: right;
-  border-left: 1px solid lightgrey;
 }
 
-.bottomChoice {
-  border-top: 1px solid lightgrey;
+.topChoice {
+  border-bottom: 1px solid lightgrey;
 }
 
 #buttonHolder {

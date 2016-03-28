@@ -169,10 +169,4 @@ function MakePlayer(name, horseUrl, wins) {
 //Variables to initialize
 var numPlayers=4;
 var playerArray = [];
-var name;
-var horseUrl;
-var horseOne;
-var horseTwo;
-var horseThree;
-var horseFour;
 var snd = new Audio('./bugle.wav');

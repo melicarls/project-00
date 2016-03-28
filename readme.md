@@ -39,7 +39,8 @@ Planned Features:
 -----------
 Screenshots:
 -----------
-
+![ScreenShot](https://raw.github.com/melicarls/project-00/master/images/PreferencesScreenshot.png)
+![ScreenShot](https://raw.github.com/melicarls/project-00/master/images/GameplayScreenshot.png)
 
 -----------
 Play game at: http://melicarls.github.io/project-00/

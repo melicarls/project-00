@@ -35,3 +35,12 @@ Planned Features:
 -More sound effects (galloping, music, etc.)
 -Handlebars templating
 -'Bot'-controlled horses
+
+-----------
+Screenshots:
+-----------
+
+
+-----------
+Play game at: http://melicarls.github.io/project-00/
+-----------

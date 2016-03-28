@@ -128,15 +128,15 @@ var horseFourAt=0;
 
   $('.countdown').on('click', function(e) {
     setTimeout(function() {
-      $('#num').text("3");}, 1000);
+      $('#num').text("3");}, 500);
     setTimeout(function() {
-      $('#num').text("2");}, 2000);
+      $('#num').text("2");}, 1500);
     setTimeout(function() {
-      $('#num').text("1");}, 3000);
+      $('#num').text("1");}, 2500);
     setTimeout(function() {
-      $('#num').text("Go!");}, 4000);
+      $('#num').text("Go!");}, 3500);
     setTimeout(function() {
-      $('#countDownBox').hide();}, 4500);
+      $('#countDownBox').hide();}, 4000);
   });
 });
 //End of document onReady

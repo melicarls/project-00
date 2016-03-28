@@ -42,55 +42,43 @@
         <h2>Player One</h2>
         <div class="getName">
           <p>Player name:</p>
-          <input type="text" class="form-control" id="playerName">
+          <input type="text" class="form-control" id="nameEntryOne" value="">
         </div>
         <div class="iconChoice">
-          <p>Choose horse:</p>
+          <p>Your horse:</p>
           <img src="images/Horse1.png">
-          <img src="images/Horse2.png">
-          <img src="images/Horse3.png">
-          <img src="images/Horse4.png">
         </div>
       </div>
       <div id="playerTwo" class ="choiceSet rightChoice">
         <h2>Player Two</h2>
         <div class="getName">
           <p>Player name:</p>
-          <input type="text" class="form-control" id="playerName">
+          <input type="text" class="form-control" id="nameEntryTwo" value="">
         </div>
         <div class="iconChoice">
-          <p>Choose horse:</p>
-          <img src="images/Horse1.png">
+          <p>Your horse:</p>
           <img src="images/Horse2.png">
-          <img src="images/Horse3.png">
-          <img src="images/Horse4.png">
         </div>
       </div>
       <div class ="threeSetup choiceSet leftChoice bottomChoice">
         <h2>Player Three</h2>
         <div class="getName">
           <p>Player name:</p>
-          <input type="text" class="form-control" id="playerName">
+          <input type="text" class="form-control" id="nameEntryThree" value="">
         </div>
         <div class="iconChoice">
-          <p>Choose horse:</p>
-          <img src="images/Horse1.png">
-          <img src="images/Horse2.png">
+          <p>Your horse:</p>
           <img src="images/Horse3.png">
-          <img src="images/Horse4.png">
         </div>
       </div>
       <div class =" fourSetup choiceSet rightChoice bottomChoice">
         <h2>Player Four</h2>
         <div class="getName">
           <p>Player name:</p>
-          <input type="text" class="form-control" id="playerName">
+          <input type="text" class="form-control" id="nameEntryFour" value="">
         </div>
         <div class="iconChoice">
-          <p>Choose horse:</p>
-          <img src="images/Horse1.png">
-          <img src="images/Horse2.png">
-          <img src="images/Horse3.png">
+          <p>Your horse:</p>
           <img src="images/Horse4.png">
         </div>
       </div>
@@ -98,13 +86,14 @@
     </div>
 
     <div id="countDownBox">
-      <h2>Click the button to start the count down. When you see "Go," press your assigned button!</h2>
-      <h1 id="num"></br></h1>
-      <p>◊ Player One: Press Z</p>
-      <p>◊ Player Two: Press P</p>
-      <p class="threeSetup">◊ Player Three: Press M</p>
-      <p class="fourSetup">◊ Player Four: Press Q</p>
-      <button type="button" class="btn btn-success submit countdown">Start Countdown</button>
+      <h2>Click the button to start the count down. When you see "Go," press your assigned key to gallop to the finish line!</h2>
+        <div id="circle"><h1 id="num"></br></h1>
+      </div>
+      <p class ="scoreOne"></p><span>Press Z</span>
+      <p class ="scoreTwo"></p><span>Press P</span>
+      <p class="scoreThree threeSetup"></p><span class="threeSetup">Press M</span>
+      <p class="scoreFour fourSetup"></p><span class="fourSetup">Press Q</span>
+    </br><button type="button" class="btn btn-success countdown">Start Countdown</button>
     </div>
 
     <div id = "container">
@@ -371,24 +360,24 @@
       <div class = "scoreboard">
         <table class ="scoreboard">
           <tr>
-            <td><img src="images/Horse1.png" class="mini"><p>Player One</p><p>Press Z</p></td>
-            <td><img src="images/Horse2.png" class="mini"><p>Player Two</p><p>Press P</p></td>
-            <td class="threeSetup"><img src="images/Horse3.png" class="mini"><p>Player Three</p><p>Press M</p></td>
-            <td class="fourSetup"><img src="images/Horse4.png" class="mini"><p>Player Four</p><p>Press Q</p></td>
+            <td><img src="images/Horse1.png" class="mini"><p class="scoreOne"></p><p>Press Z</p></td>
+            <td><img src="images/Horse2.png" class="mini"><p class="scoreTwo"></p><p>Press P</p></td>
+            <td class="threeSetup"><img src="images/Horse3.png" class="mini"><p class="scoreThree"></p><p>Press M</p></td>
+            <td class="fourSetup"><img src="images/Horse4.png" class="mini"><p class="scoreFour"></p><p>Press Q</p></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td class="threeSetup"></td>
-            <td class="fourSetup"></td>
+            <td id ="oneVictories"></td>
+            <td id="twoVictories"></td>
+            <td id = "threeVictories" class="threeSetup"></td>
+            <td id="fourVictories" class="fourSetup"></td>
           </tr>
         </table>
       </div>
       <div id = "whoWon">
-        <h1>And the winner is:</h1>
-        <h2>Player Name</h2>
-        <img src="images/Horse3.png">
         <button type="button" class="btn btn-success reset">Play Again!</button>
+        <h1>And the winner is:</h1>
+        <h1 id=winnerName></h1>
+        <div id="winPic"></div>
       </div>
     </div>
   </body>

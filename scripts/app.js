@@ -36,23 +36,33 @@ var horseFourAt=0;
 
   //Check for winner
   var winner;
+  var pic;
   $(document).on('keypress', function(e) {
     if (($(".oneEnd").hasClass("empty")===false) && ($(".twoEnd").hasClass("empty")===true) && ($(".threeEnd").hasClass("empty")===true) && ($(".fourEnd").hasClass("empty")===true)) {
-      alert("Player one wins!");
-      winner = "Player One";
+      winner = (horseOne.name);
+      pic = (horseOne.horseUrl);
+      horseOne.wins = horseOne.wins + 1;
+      $("#oneVictories").text(horseOne.wins);
     } else if (($(".twoEnd").hasClass("empty")===false) && ($(".oneEnd").hasClass("empty")===true) && ($(".threeEnd").hasClass("empty")===true) && ($(".fourEnd").hasClass("empty")===true)) {
-      alert("Player two wins!");
-      winner = "Player Two";
+      winner = (horseTwo.name);
+      pic = (horseTwo.horseUrl);
+      horseTwo.wins = horseTwo.wins + 1;
+      $("#twoVictories").text(horseTwo.wins);
     } else if (($(".threeEnd").hasClass("empty")===false) && ($(".oneEnd").hasClass("empty")===true) && ($(".twoEnd").hasClass("empty")===true) && ($(".fourEnd").hasClass("empty")===true)) {
-      alert("Player three wins!");
-      winner = "Player Three";
+      winner = (horseThree.name);
+      pic = (horseThree.horseUrl);
+      horseThree.wins = horseThree.wins + 1;
+      $("#threeVictories").text(horseThree.wins);
     } else if (($(".fourEnd").hasClass("empty")===false) && ($(".oneEnd").hasClass("empty")===true) && ($(".twoEnd").hasClass("empty")===true) && ($(".threeEnd").hasClass("empty")===true)) {
-      alert("Player four wins!");
-      winner = "Player Four";
+      winner = (horseFour.name);
+      pic = (horseFour.horseUrl);
+      horseFour.wins = horseFour.wins + 1;
+      $("#fourVictories").text(horseFour.wins);
     } else {
       return;
     }
-    $('#whoWon').show();
+    gameReset();
+    displayWinner(winner, pic);
     horseOneAt=0;
     horseTwoAt=0;
     horseThreeAt=0;
@@ -72,24 +82,50 @@ var horseFourAt=0;
     $('.bottomChoice').hide();
     $('.threeSetup').hide();
     $('.fourSetup').hide();
+    numPlayers = 2;
   });
 
   $('.threePlayers').on('click', function(e) {
     $('.topChoice').show();
     $('.threeSetup').show();
     $('.fourSetup').hide();
+    numPlayers = 3;
   });
 
   $('.fourPlayers').on('click', function(e) {
     $('.choiceSet').show();
     $('.threeSetup').show();
     $('.fourSetup').show();
+    numPlayers = 4;
   });
 //End board adjustments
 
+//Initializes game with players' chosen preferences
   $('.submit').on('click', function(e) {
     $('#selections').hide();
     $('#countDownBox').show();
+    var nameOne = document.getElementById("nameEntryOne").value;
+    var nameTwo = document.getElementById("nameEntryTwo").value;
+    var nameThree = document.getElementById("nameEntryThree").value;
+    var nameFour = document.getElementById("nameEntryFour").value;
+    if (numPlayers >= 2) {
+      horseOne = new MakePlayer((nameOne), "./images/Horse1.png", 0);
+      horseTwo = new MakePlayer(nameTwo, "./images/Horse2.png", 0);
+      playerArray.push(horseOne, horseTwo);
+      $('.scoreOne').text(horseOne.name);
+      $('.scoreTwo').text(horseTwo.name);
+    }
+    if (numPlayers >= 3) {
+      horseThree = new MakePlayer(nameThree, "./images/Horse3.png", 0);
+      playerArray.push(horseThree);
+      $('.scoreThree').text(horseThree.name);
+    }
+    if (numPlayers >=4) {
+      horseFour = new MakePlayer(nameFour, "./images/Horse4.png", 0);
+      playerArray.push(horseFour);
+      $('.scoreFour').text(horseFour.name);
+    }
+    return playerArray;
   });
 
   $('.countdown').on('click', function(e) {
@@ -105,10 +141,14 @@ var horseFourAt=0;
       $('#countDownBox').hide();}, 4500);
   });
 });
+//End of document onReady
 
-function displayWinner(win) {
+
+//Helper Functions
+function displayWinner(win, pic) {
   $('#whoWon').show();
-  $('#whoWon').append("<h1>" + win + "</h1>");
+  $('#winnerName').text(win);
+  $('#winPic').html("<img src="+pic+">");
 }
 
 function gameReset () {
@@ -121,15 +161,19 @@ function gameReset () {
   horseFourAt=0;
 }
 
-var name;
-var type;
-var horseUrl;
-var skill;
-
 //Object constructor to collect player preferences
-function MakePlayer(name, type, horseUrl, skill) {
-  name = "";
-  type = "";
-  horseUrl = "../images/Horse1.png";
-  skill = "";
+function MakePlayer(name, horseUrl, wins) {
+  this.name = name;
+  this.horseUrl = horseUrl;
+  this.wins=0;
 }
+
+//Variables to initialize
+var numPlayers=4;
+var playerArray = [];
+var name;
+var horseUrl;
+var horseOne;
+var horseTwo;
+var horseThree;
+var horseFour;

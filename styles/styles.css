@@ -20,21 +20,19 @@ h1 {
 }
 
 #selections img {
-  height: 50px;
-  border: 1px solid darkgreen;
+  width: 25%;
+  border: 1px solid lightgrey;
   border-radius: 5px;
-}
-
-#selections .btn:hover {
-  border: 1px solid lightgreen;
-}
-
-#selections img:hover {
-  border: 1px solid lightgreen;
+  margin: 0 30%;
 }
 
 #selections h2 {
   font-size: 20px;
+}
+
+#selections .btn {
+  font-family: sans-serif;
+  padding: 5px;
 }
 
 .choiceSet {
@@ -145,14 +143,23 @@ table {
   top: 150px;
   left: 25%;
   border: 1px solid grey;
-  background: white;
+  background-color: yellow;
   border-radius: 5px;
   padding: 10px;
   width: 50%;
   text-align: center;
+  color: white;
 }
 
 #whoWon .reset {
   margin: auto auto auto 50%;
   display: inline-block;
+}
+
+#circle {
+  border: 2px dotted grey;
+  max-width: 125px;
+  border-radius: 500px;
+  margin: 0 auto;
+  padding: 2px;
 }

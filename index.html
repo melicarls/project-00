@@ -12,8 +12,6 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <!-- jQuery -->
 		<script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <!-- Handlebars -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <!-- Custom JS -->
     <script type="text/javascript" src="scripts/app.js"></script>
     <title>Racing Game</title>
@@ -25,7 +23,7 @@
     </div>
     <div id = "howTo">
       <p>It's a good ol' fashioned horse race! Mash your key and beat your competitors to the finish line to earn your spot in the Winners Circle.</p>
-      <button type="button" class="btn btn-success reset">Restart Game</button>
+      <button type="button" class="btn btn-success reset">False start!</button>
     </div>
 
     <div id="selections">
@@ -42,7 +40,7 @@
         <h2>Player One</h2>
         <div class="getName">
           <p>Player name:</p>
-          <input type="text" class="form-control" id="nameEntryOne" value="">
+          <input type="text" class="form-control" maxlength="10" id="nameEntryOne" value="">
         </div>
         <div class="iconChoice">
           <p>Your horse:</p>
@@ -53,7 +51,7 @@
         <h2>Player Two</h2>
         <div class="getName">
           <p>Player name:</p>
-          <input type="text" class="form-control" id="nameEntryTwo" value="">
+          <input type="text" class="form-control" maxlength="10" id="nameEntryTwo" value="">
         </div>
         <div class="iconChoice">
           <p>Your horse:</p>
@@ -64,7 +62,7 @@
         <h2>Player Three</h2>
         <div class="getName">
           <p>Player name:</p>
-          <input type="text" class="form-control" id="nameEntryThree" value="">
+          <input type="text" class="form-control" maxlength="10" id="nameEntryThree" value="">
         </div>
         <div class="iconChoice">
           <p>Your horse:</p>
@@ -75,7 +73,7 @@
         <h2>Player Four</h2>
         <div class="getName">
           <p>Player name:</p>
-          <input type="text" class="form-control" id="nameEntryFour" value="">
+          <input type="text" class="form-control" maxlength="10" id="nameEntryFour" value="">
         </div>
         <div class="iconChoice">
           <p>Your horse:</p>
@@ -375,7 +373,7 @@
       </div>
       <div id = "whoWon">
         <button type="button" class="btn btn-success reset">Play Again!</button>
-        <h1>To the Winners Circle!</h1>
+        <h1>To the Winners Circle!</h1></br>
         <h1 id=winnerName></h1>
         <div id="winPic"></div>
         <h1>Congratulations!</h1>

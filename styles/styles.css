@@ -12,19 +12,21 @@ h1 {
 #selections {
   z-index: 2;
   position: absolute;
+  width: 90%;
+  margin: auto 5% auto 5%;
   top: 10px;
   border: 1px solid grey;
   background: white;
   border-radius: 5px;
-  margin: auto 15% auto 15%;
   padding: 10px;
 }
 
 #selections img {
   width: 25%;
+  max-width: 100px;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  margin: 0 30%;
+  margin: 0 5px;
 }
 
 #selections h2 {
@@ -70,9 +72,9 @@ h1 {
   border: 1px solid grey;
   background: white;
   border-radius: 5px;
-  margin: auto 20% auto 20%;
   padding: 10px;
   text-align: center;
+  width: 100%;
 }
 
 #countDownBox h1 {
@@ -168,4 +170,9 @@ table {
   border-radius: 500px;
   margin: 0 auto;
   padding: 2px;
+}
+
+.form-control {
+  max-width: 150px;
+  margin: auto auto 5px 5px;
 }

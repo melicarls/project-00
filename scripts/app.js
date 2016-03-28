@@ -12,22 +12,18 @@ var horseFourAt=0;
 //Player move function
   $(document).on('keypress', function(e) {
     if (e.keyCode === 122) { //z
-      console.log("Player one pressed.");
       $('.trackOne td img').eq(horseOneAt).addClass("empty");
       $('.trackOne td img').eq(horseOneAt+1).removeClass("empty");
       horseOneAt++;
     } else if (e.keyCode === 112) { //p
-      console.log("Player one pressed.");
       $('.trackTwo td img').eq(horseTwoAt).addClass("empty");
       $('.trackTwo td img').eq(horseTwoAt+1).removeClass("empty");
       horseTwoAt++;
     } else if (e.keyCode === 109) { //m
-      console.log("Player three pressed.");
       $('.trackThree td img').eq(horseThreeAt).addClass("empty");
       $('.trackThree td img').eq(horseThreeAt+1).removeClass("empty");
       horseThreeAt++;
     } else if (e.keyCode === 113) { //q
-      console.log("Player four pressed.");
       $('.trackFour td img').eq(horseFourAt).addClass("empty");
       $('.trackFour td img').eq(horseFourAt+1).removeClass("empty");
       horseFourAt++;
@@ -102,6 +98,8 @@ var horseFourAt=0;
 
 //Initializes game with players' chosen preferences
   $('.submit').on('click', function(e) {
+    snd.play();
+    snd.currentTime=0;
     $('#selections').hide();
     $('#countDownBox').show();
     var nameOne = document.getElementById("nameEntryOne").value;
@@ -177,3 +175,4 @@ var horseOne;
 var horseTwo;
 var horseThree;
 var horseFour;
+var snd = new Audio('./bugle.wav');

@@ -16,7 +16,8 @@ h1 {
   border: 1px solid grey;
   background: white;
   border-radius: 5px;
-  margin: auto 10% auto 10%;
+  margin: auto 15% auto 15%;
+  padding: 10px;
 }
 
 #selections img {
@@ -31,7 +32,6 @@ h1 {
 }
 
 #selections .btn {
-  font-family: sans-serif;
   padding: 5px;
 }
 
@@ -96,12 +96,16 @@ td {
   width: 1%;
 }
 
+tr {
+}
+
 .empty {
   display: none;
 }
 
 table {
-  background: green;
+  background-image: url("../images/background.png");
+  background-width: cover;
   height: 125px;
 }
 
@@ -123,8 +127,8 @@ table {
 }
 
 .scoreboard tr td {
-  background: lightgrey;
   border: 1px solid black;
+  background: lightgrey;
 }
 
 .mini {
@@ -143,12 +147,14 @@ table {
   top: 150px;
   left: 25%;
   border: 1px solid grey;
-  background-color: yellow;
+  background-color: white;
+  background-image: url("../images/wreath.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 5px;
   padding: 10px;
   width: 50%;
   text-align: center;
-  color: white;
 }
 
 #whoWon .reset {

@@ -4,28 +4,30 @@ $(document).on("ready", function() {
   $('#whoWon').hide();
   $('#countDownBox').hide();
 
-var horseOneAt=0;
-var horseTwoAt=0;
-var horseThreeAt=0;
-var horseFourAt=0;
+  var horseOneAt = 0;
+  var horseTwoAt = 0;
+  var horseThreeAt = 0;
+  var horseFourAt = 0;
 
-//Player move function
+  //Player move function
   $(document).on('keypress', function(e) {
+    /* TODO: great logic for player movement!
+        Challenge: refactor this into a function that uses a hash {keyCode : playerNumber} or something similar to not repeat so much code.  -jc */
     if (e.keyCode === 122) { //z
       $('.trackOne td img').eq(horseOneAt).addClass("empty");
-      $('.trackOne td img').eq(horseOneAt+1).removeClass("empty");
+      $('.trackOne td img').eq(horseOneAt + 1).removeClass("empty");
       horseOneAt++;
     } else if (e.keyCode === 112) { //p
       $('.trackTwo td img').eq(horseTwoAt).addClass("empty");
-      $('.trackTwo td img').eq(horseTwoAt+1).removeClass("empty");
+      $('.trackTwo td img').eq(horseTwoAt + 1).removeClass("empty");
       horseTwoAt++;
     } else if (e.keyCode === 109) { //m
       $('.trackThree td img').eq(horseThreeAt).addClass("empty");
-      $('.trackThree td img').eq(horseThreeAt+1).removeClass("empty");
+      $('.trackThree td img').eq(horseThreeAt + 1).removeClass("empty");
       horseThreeAt++;
     } else if (e.keyCode === 113) { //q
       $('.trackFour td img').eq(horseFourAt).addClass("empty");
-      $('.trackFour td img').eq(horseFourAt+1).removeClass("empty");
+      $('.trackFour td img').eq(horseFourAt + 1).removeClass("empty");
       horseFourAt++;
     }
   });
@@ -33,23 +35,25 @@ var horseFourAt=0;
   //Check for winner
   var winner;
   var pic;
+  /* TODO: Holy smokes!  Awe-inspiring win logic!  Now that we're more savvy with our code, I'm sure you'd be able to compress this into a more elegant code block.  Identify the repitition of code and the unique idendifiers and create a resuable function for all conditions.  Maybe with some OOP?  -jc */
+
   $(document).on('keypress', function(e) {
-    if (($(".oneEnd").hasClass("empty")===false) && ($(".twoEnd").hasClass("empty")===true) && ($(".threeEnd").hasClass("empty")===true) && ($(".fourEnd").hasClass("empty")===true)) {
+    if (($(".oneEnd").hasClass("empty") === false) && ($(".twoEnd").hasClass("empty") === true) && ($(".threeEnd").hasClass("empty") === true) && ($(".fourEnd").hasClass("empty") === true)) {
       winner = (horseOne.name);
       pic = (horseOne.horseUrl);
       horseOne.wins = horseOne.wins + 1;
       $("#oneVictories").text(horseOne.wins);
-    } else if (($(".twoEnd").hasClass("empty")===false) && ($(".oneEnd").hasClass("empty")===true) && ($(".threeEnd").hasClass("empty")===true) && ($(".fourEnd").hasClass("empty")===true)) {
+    } else if (($(".twoEnd").hasClass("empty") === false) && ($(".oneEnd").hasClass("empty") === true) && ($(".threeEnd").hasClass("empty") === true) && ($(".fourEnd").hasClass("empty") === true)) {
       winner = (horseTwo.name);
       pic = (horseTwo.horseUrl);
       horseTwo.wins = horseTwo.wins + 1;
       $("#twoVictories").text(horseTwo.wins);
-    } else if (($(".threeEnd").hasClass("empty")===false) && ($(".oneEnd").hasClass("empty")===true) && ($(".twoEnd").hasClass("empty")===true) && ($(".fourEnd").hasClass("empty")===true)) {
+    } else if (($(".threeEnd").hasClass("empty") === false) && ($(".oneEnd").hasClass("empty") === true) && ($(".twoEnd").hasClass("empty") === true) && ($(".fourEnd").hasClass("empty") === true)) {
       winner = (horseThree.name);
       pic = (horseThree.horseUrl);
       horseThree.wins = horseThree.wins + 1;
       $("#threeVictories").text(horseThree.wins);
-    } else if (($(".fourEnd").hasClass("empty")===false) && ($(".oneEnd").hasClass("empty")===true) && ($(".twoEnd").hasClass("empty")===true) && ($(".threeEnd").hasClass("empty")===true)) {
+    } else if (($(".fourEnd").hasClass("empty") === false) && ($(".oneEnd").hasClass("empty") === true) && ($(".twoEnd").hasClass("empty") === true) && ($(".threeEnd").hasClass("empty") === true)) {
       winner = (horseFour.name);
       pic = (horseFour.horseUrl);
       horseFour.wins = horseFour.wins + 1;
@@ -59,21 +63,28 @@ var horseFourAt=0;
     }
     gameReset();
     displayWinner(winner, pic);
-    horseOneAt=0;
-    horseTwoAt=0;
-    horseThreeAt=0;
-    horseFourAt=0;
+    /* TODO: a condensed version:
+    horseOneAt = horseTwoAt = horseThreeAt = horseFourAt = 0;
+    -jc */
+    horseOneAt = 0;
+    horseTwoAt = 0;
+    horseThreeAt = 0;
+    horseFourAt = 0;
   });
 
   $('.reset').on('click', function(e) {
     gameReset();
-    horseOneAt=0;
-    horseTwoAt=0;
-    horseThreeAt=0;
-    horseFourAt=0;
+    /* TODO: a condensed version:
+    horseOneAt = horseTwoAt = horseThreeAt = horseFourAt = 0;
+    -jc */
+    horseOneAt = 0;
+    horseTwoAt = 0;
+    horseThreeAt = 0;
+    horseFourAt = 0;
   });
 
-//Adjust board depending on number of players
+  /* TODO: The following three can be compressed into one function with a single number as a parameter perhaps? -jc */
+  //Adjust board depending on number of players
   $('.twoPlayers').on('click', function(e) {
     $('.bottomChoice').hide();
     $('.threeSetup').hide();
@@ -94,14 +105,17 @@ var horseFourAt=0;
     $('.fourSetup').show();
     numPlayers = 4;
   });
-//End board adjustments
+  //End board adjustments
 
-//Initializes game with players' chosen preferences
+  //Initializes game with players' chosen preferences
   $('.submit').on('click', function(e) {
     snd.play();
-    snd.currentTime=0;
+    snd.currentTime = 0;
     $('#selections').hide();
     $('#countDownBox').show();
+    /* TODO: try jquery instead of getElementById
+      var nameOne = $('#nameEntryOne').val();
+      -jc */
     var nameOne = document.getElementById("nameEntryOne").value;
     var nameTwo = document.getElementById("nameEntryTwo").value;
     var nameThree = document.getElementById("nameEntryThree").value;
@@ -118,7 +132,7 @@ var horseFourAt=0;
       playerArray.push(horseThree);
       $('.scoreThree').text(horseThree.name);
     }
-    if (numPlayers >=4) {
+    if (numPlayers >= 4) {
       horseFour = new MakePlayer(nameFour, "./images/Horse4.png", 0);
       playerArray.push(horseFour);
       $('.scoreFour').text(horseFour.name);
@@ -126,47 +140,56 @@ var horseFourAt=0;
     return playerArray;
   });
 
+  /* TODO: Awesome countdown!  Extract this to a function since it has different purpose than the game logic above. -jc */
   $('.countdown').on('click', function(e) {
     setTimeout(function() {
-      $('#num').text("3");}, 500);
+      $('#num').text("3");
+    }, 500);
     setTimeout(function() {
-      $('#num').text("2");}, 1500);
+      $('#num').text("2");
+    }, 1500);
     setTimeout(function() {
-      $('#num').text("1");}, 2500);
+      $('#num').text("1");
+    }, 2500);
     setTimeout(function() {
-      $('#num').text("Go!");}, 3500);
+      $('#num').text("Go!");
+    }, 3500);
     setTimeout(function() {
-      $('#countDownBox').hide();}, 4000);
+      $('#countDownBox').hide();
+    }, 4000);
   });
 });
 //End of document onReady
 
-
+/* TODO: A true developer has helpers!  Excellent work! -jc */
 //Helper Functions
 function displayWinner(win, pic) {
   $('#whoWon').show();
   $('#winnerName').text(win);
-  $('#winPic').html("<img src="+pic+">");
+  $('#winPic').html("<img src=" + pic + ">");
 }
 
-function gameReset () {
+function gameReset() {
   $('.cell').addClass("empty");
   $('.start').removeClass("empty");
   $('#whoWon').hide();
-  horseOneAt=0;
-  horseTwoAt=0;
-  horseThreeAt=0;
-  horseFourAt=0;
+  /* TODO: a condensed version:
+  horseOneAt = horseTwoAt = horseThreeAt = horseFourAt = 0;
+  -jc */
+  horseOneAt = 0;
+  horseTwoAt = 0;
+  horseThreeAt = 0;
+  horseFourAt = 0;
 }
 
 //Object constructor to collect player preferences
 function MakePlayer(name, horseUrl, wins) {
   this.name = name;
   this.horseUrl = horseUrl;
-  this.wins=0;
+  this.wins = 0;
 }
 
 //Variables to initialize
-var numPlayers=4;
+var numPlayers = 4;
 var playerArray = [];
 var snd = new Audio('./bugle.wav');

@@ -9,11 +9,94 @@ h1 {
   font-size: 40px;
 }
 
+table {
+  background-image: url("../images/background.png");
+  background-width: cover;
+  height: 125px;
+}
+
+td {
+  border-top: 1px solid darkgreen;
+  border-bottom: 1px solid darkgreen;
+  height: 100px;
+  width: 1%;
+}
+
+.form-control {
+  max-width: 150px;
+  margin: auto auto 5px 5px;
+}
+
+.choiceSet {
+  width: 50%;
+  padding: 10px 10px 20px 30px;
+}
+
+.leftChoice {
+  float: left;
+  border-right: 1px solid lightgrey;
+}
+
+.rightChoice {
+  float: right;
+}
+
+.bottomChoice {
+  border-top: 1px solid lightgrey;
+}
+
+.submit {
+  display: block;
+  clear: both;
+  margin: 5px;
+}
+
+.empty {
+  display: none;
+}
+
+.reset {
+  margin: -50px auto auto 85%;
+  display: inline-block;
+}
+
+/* Every other horse is raised to simulate galloping*/
+.up {
+  margin: auto auto 20px auto;
+}
+
+.scoreboard {
+    text-align: center;
+    font-size: 20px;
+    line-height: 10px;
+    margin: 5px;
+}
+
+.mini {
+  height: 50px;
+  margin: -20px auto auto auto;
+}
+
+.finish {
+  background-image: url("../images/checker.gif");
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.scoreboard tr td {
+  border: 1px solid black;
+  background: lightgrey;
+}
+
+#buttonHolder {
+  text-align: center;
+}
+
 #selections {
   z-index: 2;
   position: absolute;
-  width: 90%;
-  margin: auto 5% auto 5%;
+  width: 50%;
+  margin: auto 25% auto 25%;
   top: 10px;
   border: 1px solid grey;
   background: white;
@@ -35,34 +118,6 @@ h1 {
 
 #selections .btn {
   padding: 5px;
-  margin: 5px;
-}
-
-.choiceSet {
-  width: 50%;
-  padding: 10px 10px 20px 30px;
-}
-
-.leftChoice {
-  float: left;
-  border-right: 1px solid lightgrey;
-}
-
-.rightChoice {
-  float: right;
-}
-
-.bottomChoice {
-  border-top: 1px solid lightgrey;
-}
-
-#buttonHolder {
-  text-align: center;
-}
-
-.submit {
-  display: block;
-  clear: both;
   margin: 5px;
 }
 
@@ -92,59 +147,6 @@ h1 {
   text-align: center;
 }
 
-td {
-  border-top: 1px solid darkgreen;
-  border-bottom: 1px solid darkgreen;
-  height: 100px;
-  width: 1%;
-}
-
-tr {
-}
-
-.empty {
-  display: none;
-}
-
-table {
-  background-image: url("../images/background.png");
-  background-width: cover;
-  height: 125px;
-}
-
-.reset {
-  margin: -50px auto auto 85%;
-  display: inline-block;
-}
-
-/* Every other horse is raised to simulate galloping*/
-.up {
-  margin: auto auto 20px auto;
-}
-
-.scoreboard {
-    text-align: center;
-    font-size: 20px;
-    line-height: 10px;
-    margin: 5px;
-}
-
-.scoreboard tr td {
-  border: 1px solid black;
-  background: lightgrey;
-}
-
-.mini {
-  height: 50px;
-  margin: -20px auto auto auto;
-}
-
-.finish {
-  background-image: url("../images/checker.gif");
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-}
-
 #whoWon {
   position: absolute;
   top: 150px;
@@ -171,9 +173,4 @@ table {
   border-radius: 500px;
   margin: 0 auto;
   padding: 2px;
-}
-
-.form-control {
-  max-width: 150px;
-  margin: auto auto 5px 5px;
 }
